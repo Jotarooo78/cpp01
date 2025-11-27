@@ -6,14 +6,14 @@
 /*   By: armosnie <armosnie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 15:26:01 by armosnie          #+#    #+#             */
-/*   Updated: 2025/11/26 16:10:27 by armosnie         ###   ########.fr       */
+/*   Updated: 2025/11/26 16:41:33 by armosnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
 
-HumanB::HumanB(std::string &name) : _name(name){
-
+HumanB::HumanB(std::string name) : _name(name){
+    _weapon = NULL;
 }
 
 HumanB::~HumanB() {
