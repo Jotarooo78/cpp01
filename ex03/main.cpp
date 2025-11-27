@@ -6,7 +6,7 @@
 /*   By: armosnie <armosnie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 15:55:12 by armosnie          #+#    #+#             */
-/*   Updated: 2025/11/26 16:44:40 by armosnie         ###   ########.fr       */
+/*   Updated: 2025/11/27 11:35:25 by armosnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,9 @@ int main()
     HumanA Rick = HumanA("Rick", club);
     Rick.attack();
 
-    HumanB Daryl = HumanB("Rick");
-    club.setWeaponType("crossbow");
+    HumanB Daryl = HumanB("Daryl");
+    club.setWeaponType("club with nails");
+    Daryl.setWeapon(club);
     Daryl.attack();
     return 0;
 }

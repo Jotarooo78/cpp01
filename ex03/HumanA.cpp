@@ -6,7 +6,7 @@
 /*   By: armosnie <armosnie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 14:15:33 by armosnie          #+#    #+#             */
-/*   Updated: 2025/11/26 16:42:01 by armosnie         ###   ########.fr       */
+/*   Updated: 2025/11/27 11:19:06 by armosnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ HumanA::~HumanA() {
 
 void HumanA::attack() {
     
-    std::cout << _name << "is smashing a zombie head with its" << _weapon.getWeaponType() << std::endl;
+    std::cout << _name << " is smashing a zombie head with his " << _weapon.getWeaponType() << std::endl;
 }

@@ -1,5 +1,5 @@
 # ================== CONFIGURATION ================== #
-NAME      := zombieHorde
+NAME      := Unnecessary_violence
 CC        := c++
 CFLAGS    := -Wall -Wextra -Werror -g -std=c++98
 OPTIONS   := -I includes
