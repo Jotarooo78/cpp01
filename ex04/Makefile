@@ -1,10 +1,10 @@
 # ================== CONFIGURATION ================== #
-NAME      := Unnecessary_violence
+NAME      := Replace
 CC        := c++
 CFLAGS    := -Wall -Wextra -Werror -g -std=c++98
 OPTIONS   := -I includes
 
-SRC_FILES := main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
+SRC_FILES := main.cpp
 OBJ_DIR   := obj
 
 SRC   := $(SRC_FILES)

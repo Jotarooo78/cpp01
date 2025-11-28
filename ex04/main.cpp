@@ -6,7 +6,7 @@
 /*   By: armosnie <armosnie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 13:46:58 by armosnie          #+#    #+#             */
-/*   Updated: 2025/11/27 16:38:32 by armosnie         ###   ########.fr       */
+/*   Updated: 2025/11/28 11:55:48 by armosnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ std::string replaceAll(std::string content, std::string s1, std::string s2){
         result += s2;
         pos = found + s1.length();
     }
+    result += content.substr(pos);
+    
     return result;
 }   
 
@@ -33,12 +35,12 @@ int main(int argc, char **argv)
 {
     if (argc != 4)
         return 1;
-    std::string file = argv[1];
+    std::string filename = argv[1];
     std::string s1 = argv[2];
     std::string s2 = argv[3];
-    std::ifstream infile(file);
+    std::ifstream infile(filename.c_str());
     if (!infile.is_open()){
-        std::cout << "opening file failed" << std::endl;
+        std::cout << "creating infile failed" << std::endl;
         return 1;
     }
     std::string line;
@@ -50,5 +52,14 @@ int main(int argc, char **argv)
             content+= "\n"; 
     }
     infile.close();
-    std::string replaceAll(std::string content, std::string to_find, std::string text);
+    content = replaceAll(content, s1, s2);
+    std::ofstream outfile((filename + ".replace").c_str());
+    if (!outfile.is_open()){
+        std::cout << "creating outfile failed" << std::endl;
+        return 1;
+    }
+    outfile << content;
+    outfile.close();
+    std::cout << "creating replace file success" << std::endl;
+    return 0;
 }
